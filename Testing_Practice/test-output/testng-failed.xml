@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="testNG.listeners.TransformerListener"/>
-  </listeners>
-  <test thread-count="5" name="TestingFailedTestCases(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.listeners.RetryTest">
+      <class name="test.datadriven.TestDataDriven">
         <methods>
+          <include name="getData"/>
           <include name="test1"/>
-          <include name="test3"/>
         </methods>
-      </class> <!-- testNG.listeners.RetryTest -->
+      </class> <!-- test.datadriven.TestDataDriven -->
     </classes>
-  </test> <!-- TestingFailedTestCases(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
